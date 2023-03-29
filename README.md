@@ -8,3 +8,9 @@ The repository includes four projects:
  2. Image Classifier: This project involves the implementation of an image classifier using convolutional neural networks (CNNs) and transfer learning. The aim of the project is to classify images from the CIFAR-10 dataset into ten categories.
  4. Tactics and Procedural Map Generation: This project involves creating tactics and maps in the S3 game. 
  5. Video Game in Unity and C#: This project involves the development of a video game using the Unity game engine and C# programming language. The game is still in progress.
+
+## Requirements
+Each project has its own requirements, which are listed in the project's README file. Please refer to each project's README file for specific requirements.
+
+## Getting Started
+To get started with any of the projects, clone the repository and follow the instructions provided in the project's README file.
