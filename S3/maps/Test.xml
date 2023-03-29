@@ -1,0 +1,63 @@
+<gamestate>
+    <entity id="0">
+        <type>map</type>
+        <width>32</width>
+        <height>13</height>
+        <background>
+            <row>.....ttttt..........tttttttttttt</row>
+            <row>.....t................tttttttttt</row>
+            <row>.........................ttttttt</row>
+            <row>............................tttt</row>
+            <row>t.............................tt</row>
+            <row>t.............................tt</row>
+            <row>t..............................t</row>
+            <row>t...............................</row>
+            <row>................................</row>
+            <row>ttttttttt..............t........</row>
+            <row>wtttttttttttttt.....tttt.......t</row>
+            <row>wwwwwwwwwwttttttttttttww.......t</row>
+            <row>wwwwwwwwwwttttttttttttww.......t</row>
+        </background>
+    </entity>
+    <entity id="14">
+        <type>WPlayer</type>
+        <gold>2000</gold>
+        <wood>1500</wood>
+        <owner>player1</owner>
+    </entity>
+    <entity id="15">
+        <type>WPlayer</type>
+        <gold>2000</gold>
+        <wood>1500</wood>
+        <owner>player2</owner>
+    </entity>
+
+    <entity id="4">
+        <type>WGoldMine</type>
+        <x>0</x>
+        <y>0</y>
+        <remaining_gold>100000</remaining_gold>
+        <current_hitpoints>25500</current_hitpoints>
+    </entity>
+    <entity id="5">
+        <type>WGoldMine</type>
+        <x>0</x>
+        <y>12</y>
+        <remaining_gold>100000</remaining_gold>
+        <current_hitpoints>25500</current_hitpoints>
+    </entity>
+    <entity id="2">
+        <type>WPeasant</type>
+        <x>6</x>
+        <y>6</y>
+        <owner>player1</owner>
+        <current_hitpoints>30</current_hitpoints>
+    </entity>
+    <entity id="7">
+        <type>WPeasant</type>
+        <x>30</x>
+        <y>12</y>
+        <owner>player2</owner>
+        <current_hitpoints>30</current_hitpoints>
+    </entity>
+</gamestate>

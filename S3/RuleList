@@ -1,0 +1,20 @@
+# Builder
+doBuildBase(Z) :- ~ownBase(C),goldAvailable(X),woodAvailable(A),goldNeededFor(WTownhall,Y),woodNeededFor(WTownhall,B),X>Y,A>B,builder(Z).
+doBuildBarracks(Z) :- ~ownBarrack(J),total(C,WPeasant),C>1,goldAvailable(X),woodAvailable(A),goldNeededFor(WBarracks,Y),woodNeededFor(WBarracks,B),X>Y,A>B,builder(Z).
+doBuildBarracks(Z) :- total(C,WFootman),C>0,total(J,WBarracks),J<2,goldAvailable(X),woodAvailable(A),goldNeededFor(WBarracks,Y),woodNeededFor(WBarracks,B),X>Y,A>B,builder(Z).
+
+# Base Behavior
+doTrainWorker(Z) :- total(C,WPeasant),C<3,goldAvailable(X),woodAvailable(A),goldNeededFor(WPeasant,Y),woodNeededFor(WPeasant,B),X>Y,A>B,ownBase(Z),idle(Z).
+doTrainWorker(Z) :- total(C,WBarracks),C>0,total(J,WPeasant),J<12,goldAvailable(X),woodAvailable(A),goldNeededFor(WPeasant,Y),woodNeededFor(WPeasant,B),X>Y,A>B,ownBase(Z),idle(Z).
+
+# Barracks
+doTrainLight(Z) :- ownBarrack(Z),idle(Z).
+
+# Havesters
+doHarvest(X,Y,Z) :- own(X),idleWorker(X),ownMine(Y),ownBase(Z),needMiners(1).
+doHarvest(X,Z) :- own(X),idleWorker(X),ownBase(Z),needLoggers(1).
+
+# meleeUnitBehavior
+doAttack(X,Y) :- own(X),idleLight(X),enemy(Y),total(C,WFootman),C>6,type(Y,WPeasant).
+doAttack(X,Y) :- own(X),idleLight(X),enemy(Y),total(C,WFootman),C>6,type(Y,WFootman).
+doAttack(X,Y) :- own(X),idleLight(X),enemy(Y),total(C,WFootman),C>6,~type(Y,WGoldMine).
